@@ -7,7 +7,8 @@
 
 
 body {
-   
+    overflow-x: hidden;
+   width: 100vw;
 }
 
 
@@ -79,7 +80,7 @@ body {
 
 
 .slideshow h3 {
-    position: absolute;
+    position: relative;
     padding-top: 30px;
     width: 100%;
     white-space: nowrap; /* pas de passage à la ligne */
@@ -111,12 +112,17 @@ body {
 .chaos {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     background-color: white;
-    height: 800px;
     padding: 50px;
     width: 100%;
+}
+@media (max-width: 1050px) {
+    .chaos {
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 
@@ -136,10 +142,121 @@ body {
     width: 500px;
 }
 
+.chaos .paralaxe {
+    position: relative;
+    right: 3%;
+}
+
 .chaos #one {
     background-color: #26C1D9;
     color: white;
 }
+
+.chaos #one::after {
+    background-color: #26C1D9;
+    border: 1px solid #26C1D9;
+}
+
+
+
+.challenges {
+    width: 100vw;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(89.16deg, #072038 1.27%, #0A355F 99.82%);
+}
+
+.challenges h1 {
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.challenges span {
+    color: #26C1D9;
+}
+
+.challenges .challenge {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px;
+    width: 80vw;
+    background-color: white;
+    border-radius: 40px;
+}
+
+.challenges .img {
+    width: 50%;
+}
+
+.challenges .img .big_img {
+    width: 70%;
+    height: 70%;
+    margin-left: 60px;
+}
+
+.challenges .challenge .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 120px;
+}
+
+.challenges .challenge .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+}
+
+.challenges .challenge p {
+    font-family: "Porpora", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #072038;
+    padding-right: 300px;
+}
+
+.challenges .challenge .skills .skill {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.challenges .challenge .skills p {
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.challenges .challenge .title img{
+    width: 48px;
+    height: 48px;
+}
+
+
+
+.challenges .challenge .skills img {
+    width: 24px;
+    height: 24px;
+}
+
+.challenges button {
+    margin-top: 30px;
+}
+
+
 
   
 
