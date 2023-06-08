@@ -5,32 +5,87 @@
     src: url("fonts/Porpora-Regular.ttf");
 }
 
-
-body {
-    overflow-x: hidden;
-   width: 100vw;
+html {
+    scroll-behavior: smooth;
 }
 
 
+body {
+    width: 100vw;
+    margin: 0;
+   overflow-x: hidden;
+}
+
+
+header {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(89.16deg, #072038 0vw, #0A355F 100vw);
+}
+
+header a img {
+    fill: #fff;
+}
+
+header .logo_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+header .logo_nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-right: 50px;
+}
+
+header .logo_nav ul li {
+    margin-left: 20px;
+}
+
+header .demo_langs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.demo_langs p {
+    margin-left: 5px;
+    font-family: 'Outfit', sans-serif;
+    color: #26C1D9;
+}
+
+.main_main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(89.16deg, #072038 0vw, #0A355F 100vw);
+}
 
 
 .main {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 50px;
-    background: linear-gradient(89.16deg, #072038 1.27%, #0A355F 99.82%);
-}
+    padding-bottom: 150px;
+    background: linear-gradient(89.16deg, #072038 0vw, #0A355F 100vw);}
 
-
-
-@media (max-width: 1050px) {
-    .main {
-      flex-direction: column;
-    }
-}
 
 .main .hero_image {
     width: 40%;
@@ -69,26 +124,24 @@ body {
 }
 
 .slideshow{
-    position: absolute;
+    position: relative;
+    width: 100vw;
     font-family: 'Outfit', sans-serif;
     font-size: 160px;
     width: 100%;
-    height: 300px; /* Ajustez la hauteur de la bordure inclinée */
-    background: linear-gradient(89.16deg, #072038 1.27%, #0A355F 99.82%);
-    transform: rotate(-3.5deg);    
 }
 
 
 .slideshow h3 {
-    position: relative;
-    padding-top: 30px;
-    width: 100%;
+    margin: 0;
+    width: 100vw;
     white-space: nowrap; /* pas de passage à la ligne */
     animation: defilement-rtl 10s infinite linear;
     color: transparent;
     -webkit-text-stroke: 3px #26C1D9; /* Bordure de 1 pixel en noir */
-    transform: rotate(-3.5deg); 
     background-clip: text;
+    top: 10%; /* Ajustez la valeur en fonction de la hauteur de la div */
+    margin-bottom: 30px;
 }
 
 .slideshow h3 span {
@@ -98,32 +151,29 @@ body {
 
 @keyframes defilement-rtl {
     0% {
-        transform:  translateX(0%);
-        
+        transform: translateX(0%);
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-100%); 
     }
 
 
 }
+
 
 .chaos {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: flex-start;
     background-color: white;
     padding: 50px;
-    width: 100%;
+    width: 100vw;
+    margin-top: 100px;
+    padding-bottom: 200px;
 }
-@media (max-width: 1050px) {
-    .chaos {
-      flex-direction: column;
-      align-items: center;
-    }
-}
+
 
 
 .chaos h1 {
@@ -140,6 +190,7 @@ body {
     font-size: 18px;
     line-height: 24px;
     width: 500px;
+    word-wrap: break-word;
 }
 
 .chaos .paralaxe {
@@ -147,26 +198,26 @@ body {
     right: 3%;
 }
 
-.chaos #one {
-    background-color: #26C1D9;
-    color: white;
+.cover {
+    width: 70%;
+    height: 70%;
+    display: block;
+    margin: -140px auto;
 }
 
-.chaos #one::after {
-    background-color: #26C1D9;
-    border: 1px solid #26C1D9;
-}
 
 
 
 .challenges {
+    padding-top: 200px;
     width: 100vw;
     display: flex;
     flex-direction:column;
     justify-content: space-evenly;
     align-items: center;
-    background: linear-gradient(89.16deg, #072038 1.27%, #0A355F 99.82%);
+    background: linear-gradient(89.16deg, #072038 0vw, #0A355F 100vw);
 }
+
 
 .challenges h1 {
     font-family: 'Outfit', sans-serif;
@@ -174,6 +225,7 @@ body {
     font-size: 60px;
     font-weight: 500;
 }
+
 
 .challenges span {
     color: #26C1D9;
@@ -183,30 +235,33 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
     padding: 50px;
     width: 80vw;
     background-color: white;
     border-radius: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.challenges .img {
-    width: 50%;
-}
 
 .challenges .img .big_img {
-    width: 70%;
-    height: 70%;
-    margin-left: 60px;
+    width: 100%;
+    height: 100%;
 }
 
 .challenges .challenge .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;
     margin-left: 120px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .challenges .challenge .content{
+        align-items: center;
+        margin: 0;
+    }
+  }
 
 .challenges .challenge .title {
     display: flex;
@@ -217,18 +272,24 @@ body {
     font-weight: 100;
 }
 
+.challenges h2 {
+    font-family: 'Outfit', sans-serif;
+    color: black;
+    font-size: 40px;
+    font-weight: 500;
+}
+
 .challenges .challenge p {
     font-family: "Porpora", sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #072038;
-    padding-right: 300px;
 }
 
 .challenges .challenge .skills .skill {
     display: flex;
     flex-direction: row;
-    justify-content: stretch;
+    justify-content: flex-start;
     align-items: center;
     margin-top: 30px;
     margin-left: 20px;
@@ -237,7 +298,7 @@ body {
 .challenges .challenge .skills p {
     font-size: 20px;
     font-weight: 500;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .challenges .challenge .title img{
@@ -250,15 +311,122 @@ body {
 .challenges .challenge .skills img {
     width: 24px;
     height: 24px;
+    background-color: #F0FDFF;
+    padding: 10px;
 }
 
+
+.challenges .challenge .skill:hover {
+    background-color: #F0FDFF;
+}
 .challenges button {
     margin-top: 30px;
 }
 
 
 
-  
+.blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.blog h1 {
+    font-family: 'Outfit', sans-serif;
+    color: #072038;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.text p {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.blog p {
+    font-family: "Porpora", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #072038;
+}
+
+
+.windows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.windows .title {
+    font-family: 'Outfit', sans-serif;
+    color: #072038;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid #A0BDC0;
+    border-radius: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.window .text{
+    max-width: 500px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.window:hover {
+    background-color: #F0FDFF;
+    border: 1px solid transparent;
+}
+
+.window .blog_button {
+    margin: 20px;
+    padding: 10px;
+    background-color: transparent;
+    color : #26C1D9;
+    border: 1px solid #26C1D9;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.window .blog_button:hover {
+    color: white;
+    background-color: #26C1D9;
+    border: 1px solid transparent;
+}
+
+.writter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.writter img {
+    width: 10%;
+    height: 10%;
+    border-radius: 70%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -284,7 +452,7 @@ body {
   .button::after {
     content: "\279C";
     position: absolute;
-    top: 24%;
+    top: 30%;
     right: -20px;
     width: 20px;
     height: 100%;
@@ -309,24 +477,207 @@ body {
     right: -20px;
   }
 
-
-
-
-/*.chaos::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: -5px; /* Ajustez la valeur en fonction de l'épaisseur de la bordure 
-    background-color: #fff;
-    transform: skewY(-5deg);
-    z-index: -1;
+.button2 {
+padding-left: 10px;
+font-size: 16px;
+text-transform: uppercase;
+font-weight: 550;
+color: #072038;
+border: 1px solid #26C1D9;
+background-color: #26C1D9;
+border-radius: 30px;
+height: 48px;
+display: inline-block;
+padding: 5px 10px;
+font-size: 16px;
+position: relative;
+overflow: hidden;
+transition: padding 0.3s ease;
 }
-  
-.chaos > .content {
-    position: relative;
-    z-index: 1;
-    padding-bottom: 20px; /* Ajustez la valeur en fonction de l'épaisseur de la bordure
-    background-color: #fff;
-}*/
+
+.button2::after {
+content: "\279C";
+position: absolute;
+top: 30%;
+right: -20px;
+width: 20px;
+height: 100%;
+background-color: #26C1D9;
+transition: right 0.3s ease;
+}
+
+
+.button2:hover {
+padding-right: 30px;
+}
+
+.button2:hover::after {
+right: 0;
+}
+
+.button2:not(:hover) {
+padding-right: 10px;
+}
+
+.button2:not(:hover)::after {
+right: -20px;
+}
+
+.button3 {
+font-size: 16px;
+font-weight: 550;
+color: #26C1D9;
+border: 1px solid transparent;
+background-color: transparent;
+border-radius: 30px;
+height: 48px;
+font-size: 16px;
+position: relative;
+overflow: hidden;
+transition: padding 0.3s ease;
+}
+
+.button3::after {
+color: #FD7762;
+content: "\279C";
+position: absolute;
+top: 30%;
+right: -20px;
+width: 20px;
+height: 100%;
+background-color: transparent;
+transition: right 0.3s ease;
+}
+
+
+.button3:hover {
+padding-right: 30px;
+}
+
+.button3:hover::after {
+right: 0;
+}
+
+.button3:not(:hover) {
+padding-right: 10px;
+}
+
+.button3:not(:hover)::after {
+right: -20px;
+}
+
+
+footer {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #156B79;
+}
+
+footer button {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #26C1D9;
+}
+
+footer .voie {
+    font-family: "Porpora", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #072038;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+
+
+
+@media (max-width: 1050px) {
+    .main {
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main .hero_image {
+        margin-top: 30px;
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .chaos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        padding-bottom: 200px;
+      }
+    
+      .challenges{
+        text-align: center;
+    }
+
+    .challenges .challenge {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .challenges .challenge .content{
+        align-items: center;
+        margin: 0;
+    }
+
+    .blog .text p {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .windows{
+        flex-direction: column;
+    }
+
+    .window {
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_content {
+        align-items: center;
+    }
+}
+

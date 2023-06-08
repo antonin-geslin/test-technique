@@ -9,28 +9,42 @@
 </head>
 <body>
     <header>
-
-    </header>
-
-    <div class="main">
-        <div class = "left_content">
-            <h1>Meet the future</h1>
-            <h1>of your</h1>
-            <h1 class="color">organization</h1> 
-            <h1>today</h1>
-            <p>We build software that empower public and private organizations to <br> bridge the gap between data, decisions and strategy execution.</p>
-            <button class="button">Let's Talk</button>
-            <div class = "partners">
-                <img src='https://dummyimage.com/100x100.png' alt=''/>
-                <img src='https://dummyimage.com/100x100.png' alt=''/>
-                <img src='https://dummyimage.com/100x100.png' alt=''/>
-                <img src='https://dummyimage.com/100x100.png' alt=''/>
-            </div>
+        <div class="logo_nav">
+          <a href="index.html"><img src="img/Logo.svg"></a>
+          <nav>
+            <ul>
+              <li class="menu-item" onmouseover="showContent(1)">Products</li>
+              <li class="menu-item" onmouseover="showContent(2)">Ressources</li>
+              <li class="menu-item">Company</li>
+            </ul>
+          </nav>
         </div>
-            <img class="hero_image" src = "img/illustration-data-management.png">
-    </div>
-    <div class="slideshow">
-        <h3>DATA <span>VAULT</span> – DATA <span>LAKES</span> – DATA <span>MARTS</span> – DATA <span>CLOUD</span> – DATA <span>WAREHOUSES</span> – STRATEGY <span>EXECUTION</span> </h3>
+        <div class="demo_langs">
+          <button class="button2">Free demo</button>
+          <p>FR</p>
+        </div>
+    </header>
+    <div class="main_main">
+        <div class="main">
+            <div class = "left_content">
+                <h1>Meet the future</h1>
+                <h1>of your</h1>
+                <h1 class="color">organization</h1> 
+                <h1>today</h1>
+                <p>We build software that empower public and private organizations to <br> bridge the gap between data, decisions and strategy execution.</p>
+                <button class="button">Let's Talk</button>
+                <div class = "partners">
+                    <img src='https://dummyimage.com/100x100.png' alt=''/>
+                    <img src='https://dummyimage.com/100x100.png' alt=''/>
+                    <img src='https://dummyimage.com/100x100.png' alt=''/>
+                    <img src='https://dummyimage.com/100x100.png' alt=''/>
+                </div>
+            </div>
+            <img class="hero_image" src = "img/illustration-data-management.png">  
+        </div>
+        <div class="slideshow">
+            <h3>DATA <span>VAULT</span> – DATA <span>LAKES</span> – DATA <span>MARTS</span> – DATA <span>CLOUD</span> – DATA <span>WAREHOUSES</span> – STRATEGY <span>EXECUTION</span> </h3>
+        </div>
     </div>
     <div class = "chaos">
         <div class="title">
@@ -42,14 +56,10 @@
             <p>However, company runs their processes over hundreds of systems that don’t play nice together, leaving a lot of room for inefficiencies to hide that are silent killers to your business performance.</p>
             <p>While many companies state they want to be data-driven, most have only begun to scratch the surface in terms of realizing the full potential of this rich resource.</p>
             <p>Pilot'in recognizes the right for organizations to become truly data-driven, moving  from a fragmented view to a global vision and drive their strategy even further.</p>
-            <button class = "button" id="one">Discover our vision</button>
-        </div>
-        <div class="paralaxe">
-            <img src = "parallaxe-shapes-duo-colors.svg">
+            <button class = "button2">Discover our vision</button>
         </div>
     </div>
-
-
+    <img class = "cover"    src="img/computer-screen-data-score-analyst.png">
     <div class="challenges">
         <h1>How we help tackle these <span>challenges</span> ?</h1>
         <div class="challenge">
@@ -93,11 +103,11 @@
                     <p>Plan, do, check and align all your strategic plans in one single platform designed and built for modern and efficient organizations. No more spreadsheets sent via emails or time wasted for reconciliation. Focus on what really matters, achieving your goals.</p>
                     <div class="skills">
                         <div class="skill">
-                            <img>
+                            <img src="icons/lan.png">
                             <p>Connect strategic plans to execution</p>
                         </div>
                         <div class="skill">
-                            <img>
+                            <img src="icons/bar-chart.png">
                             <p>Know the status of plans </p>
                         </div>
                         <div class="skill">
@@ -105,17 +115,84 @@
                             <p>Adapt quickly to changes</p>
                         </div>
                         <div class="skill">
-                            <img>
+                            <img src = "icons/trophy.png">
                             <p>Reward real achiviers</p>
                         </div>
                     </div>
-                    <button class = "buttton">Découvrir la solution</button>
+                    <button class = "button">Découvrir la solution</button>
                 </div>
                 <div class="content_right">
-
                 </div>
             </div>
         </div>
     </div>
+    <div class="blog">
+        <div class="text">
+            <h1>Nos articles de blog</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est ridiculus velit interdum aliquam libero sit a in. Id nibh vitae, massa sed a vel ultricies pharetra auctor. Libero sed facilisi faucibus etiam aliquet amet, purus, tortor, cursus. Mauris malesuada morbi ultrices diam amet fringilla adipiscing faucibus quis.</p>
+        </div>
+        <div class="windows">
+            <div class="window">
+                <button href="#" class = "blog_button">Catégorie</button>
+                <p class = "title" >Titre de l’article sur une ou plusieurs lignes. Au delà de 100 caractères le texte sera masqué par des poin…</p>
+                <p class = "text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit mi a facilisi bibendum erat euismod nulla sagittis. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit</p>
+                <div class="writter">
+                    <img src = "img/placeholder-team-04.png">
+                    <p>Julien Dereumaux - Capitaine de Pilot’in</p>
+                    <img src="icons/la-fleche.png">
+                </div>
+            </div>
+            <div class="window">
+                <button href="#" class = "blog_button">Catégorie</button>
+                <p class = "title">Titre de l’article sur une ou plusieurs lignes. Au delà de 100 caractères le texte sera masqué par des poin…</p>
+                <p class = "text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit mi a facilisi bibendum erat euismod nulla sagittis. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit</p>
+                <div class="writter">
+                    <img src = "img/placeholder-team-04.png">
+                    <p>Julien Dereumaux - Capitaine de Pilot’in</p>
+                    <img src="icons/la-fleche.png">
+                </div>
+            </div>
+            <div class="window">
+                <button href="#" class = "blog_button">Catégorie</button>
+                <p class = "title">Titre de l’article sur une ou plusieurs lignes. Au delà de 100 caractères le texte sera masqué par des poin…</p>
+                <p class = "text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit mi a facilisi bibendum erat euismod nulla sagittis. Semper urna molestie arcu sit id. Ultricies purus lectus consectetur imperdiet aliquam eu, rutrum erat consectetur. Blandit</p>
+                <div class="writter">
+                    <img src = "img/placeholder-team-04.png">
+                    <p>Julien Dereumaux - Capitaine de Pilot’in</p>
+                    <img src="icons/la-fleche.png">
+                </div>
+            </div>
+        </div>
+        <button class = "button2">Tous les articles</button>
+    </div>
+    <footer>
+        <div class="footer_content">
+            <h3>Get involved</h3>
+            <div class ="buttons">
+                <button class = "button3">About us</button>
+                <button class = "button3">Join us</button>
+                <button class = "button3">Contact us</button>
+            </div>
+        </div>
+        <div class="footer_content">
+            <h3>Belgium</h3>
+            <p class = "voie">Nom et numéro de la voie</p>
+            <button class = "button3">+33 000000000</button>
+        </div>
+        <div class="footer_content">
+            <h3>France</h3>
+            <p class = "voie">Nom et numéro de la voie</p>
+            <button class = "button3">+33 000000000</button>
+        </div>
+        <div class="footer_content">
+            <h3>Suivez nous sur les réseaux sociaux</h3>
+            <div class="social">
+                <img src = "icons/twitter.png">
+                <img src = "icons/linkedin.png">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
